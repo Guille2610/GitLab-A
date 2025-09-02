@@ -1,0 +1,145 @@
+/* ---------- Colores constantes -----------*/
+:root {
+    --main-color-light: #f0f0f0;
+    --main-color-dark: #333333;
+    --secondary-color-light: #88abdd;
+    --secondary-color-dark: #444444;
+}
+
+/* Classes that use the variables */
+.mainColorLight {
+    background-color: var(--main-color-light);
+}
+
+.mainColorDark {
+    background-color: var(--main-color-dark);
+}
+
+.secondaryColorLight {
+    background-color: var(--secondary-color-light);
+}
+
+.secondaryColorDark {
+    background-color: var(--secondary-color-dark);
+}
+
+
+/* ---------- Estilos Generales -----------*/
+
+* {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    height: 100vh;
+    background: white;
+    background-image: radial-gradient(black 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+
+    
+
+}
+
+.mainContainer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.participantContainer{
+    display: flex;
+    position: relative;
+    gap: 20px;
+    height: 15rem;
+    width: 70%;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px;
+}
+
+.participantContainer:hover > .participantImageContainer {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.participantImageContainer{
+    border: 4px solid #94b6df;
+    aspect-ratio: 1/1;
+    height: 100%;
+    transform: rotate(10deg);
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.participantInformationContainer{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.descriptionContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.participantFiscImageStickerContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    padding: 5px;
+    top: -30px;
+    right: -150px;
+    width: 25rem;
+    border-radius: 60px;
+    transition: all 0.3s ease;
+    
+}
+
+.participantFiscImageStickerContainer p{
+    display: none;
+}
+
+.participantFiscImageStickerContainer:hover{
+    background-color: #343030;
+}
+
+.participantFiscImageStickerContainer:hover > p{
+    display:block;
+}
+
+.participantFiscImageSticker {
+    aspect-ratio: 1/1;
+    height: 4rem;
+    transform: rotate(10deg);
+    animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(10deg) scale(1);
+    }
+    50% {
+        transform: rotate(10deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(10deg) scale(1);
+    }
+}
