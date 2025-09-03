@@ -1,0 +1,131 @@
+body {
+  background-image: url('images/slowdivewallpaper.png');
+  background-size: cover;     
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+/* Cuadro para el título */
+.titulo {
+  position: relative;   /* se mantiene dentro del flujo normal */
+  top: 20px;            /* lo baja un poco desde arriba */
+  margin: 0 auto;       /* centra horizontalmente */
+  width: 60%;           /* ancho del cuadro */
+  padding: 20px;
+  background: #EFDDBA; /* fondo semitransparente */
+  border-radius: 15px;  /* esquinas redondeadas */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* sombrita */
+}
+
+.logo{
+  width: 300px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.titulo h1 {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5rem;
+  color: red;
+}
+
+/*contenido principal*/
+.contenido {
+  margin: 50px auto;       /* separa del título y lo centra */
+  width: 70%;              /* ancho del cuadro */
+  padding: 30px;
+  background: #f5dfb7; 
+  border-radius: 20px;
+  text-align: left;        /* texto alineado normal */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  color: red;          
+  font-size: 1.2rem;
+  line-height: 1.6;
+} 
+
+.contenido-miembros {
+  margin: 50px auto;
+  width: 80%;
+  padding: 30px;
+  background: #ffd586c4;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  color: #f5f5f5;
+}
+
+.contenido-miembros h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+/* Cuadrícula */
+.grid-miembros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px;
+}
+
+/* Tarjetas individuales */
+.miembro {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+.miembro:hover {
+  transform: scale(1.05);
+}
+
+/* Imágenes */
+.miembro img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 15px; /* solo esquinas redondeadas */
+  margin-bottom: 10px;
+}
+
+.contenido-stream  {
+  margin: 50px auto;       /* separa del título y lo centra */
+  width: 80%;              /* ancho del cuadro */
+  padding: 30px;
+  background: #f5dfb7; 
+  border-radius: 20px;
+  text-align: center;        /* texto alineado normal */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  color: red;          
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
+}
+
+footer {
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+}
+
