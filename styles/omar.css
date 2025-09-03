@@ -1,0 +1,170 @@
+/* Fuentes y colores */
+:root {
+    --font-main: 'Poppins', sans-serif;
+    --font-alt: 'Quicksand', sans-serif;
+
+    --color-bg: #0c0c0c;
+    --color-text: #f5f5f5;
+    --color-accent1: #ff75b5; /* rosa pastel */
+    --color-accent2: #ffa94d; /* naranja suave */
+    --color-overlay: rgba(0, 0, 0, 0.55);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    scroll-behavior: smooth;
+}
+
+
+/* Hero */
+.hero {
+    background: url('https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FJason_and_Lucia_01_With_Logos_landscape.8596f77a.jpg&w=3840&q=75') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    background: var(--color-overlay);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    background: linear-gradient(to right, var(--color-accent1), var(--color-accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-family: var(--font-alt);
+    margin-top: 15px;
+}
+
+/* Navbar */
+.navbar {
+    background: #1a1a1a;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    font-family: var(--font-alt);
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--color-accent2);
+}
+
+/* Sections */
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 60px 5%;
+    gap: 30px;
+}
+
+.section.reverse {
+    flex-direction: row-reverse;
+}
+
+.section-img {
+    flex: 1 1 400px;
+    max-width: 500px;
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(255, 117, 181, 0.3);
+}
+
+.section-content {
+    flex: 1 1 400px;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, var(--color-accent1), var(--color-accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--font-main);
+}
+
+.section p {
+    font-size: 1.1rem;
+    font-family: var(--font-alt);
+    line-height: 1.6;
+}
+
+/* Call to Action */
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #2a2a2a, #1c1c1c);
+}
+
+.cta-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--color-accent1);
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: linear-gradient(to right, var(--color-accent1), var(--color-accent2));
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
